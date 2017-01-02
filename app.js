@@ -25,7 +25,7 @@ var app = express();
 
 
 // DB CONNECT PROMIJENITI U ENV VARIJABLU KASNIJE
-mongoose.connect('mongodb://benjo:123@ds141118.mlab.com:41118/bosnae');
+mongoose.connect(process.env.BAZA);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
