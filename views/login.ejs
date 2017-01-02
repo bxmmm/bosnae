@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+
+<div class='glavnina'>
+  <div class='container'>
+    <h1>Login page</h1>
+    <form action='/login' method='POST'>
+      <div>
+        <label for='email'>Username</label>
+        <input type='text' name='username'>
+      </div>
+      <div>
+        <label for='password'>Password</label>
+        <input type='password' name='password'>
+      </div>
+      <button class='btn btn-primary'>Login</button>
+    </form>
+  </div>
+</div>
+<% include ./partials/footer %>

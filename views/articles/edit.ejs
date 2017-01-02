@@ -1,0 +1,20 @@
+<% include ../partials/header %>
+
+<div class='glavnina'>
+  <form action='/articles/<%=article._id%>?_method=PUT' method='POST' id='newarticle'>
+    <div class='form-group text-center'>
+      <label for='article[name]'>Title</label>
+      <input class="form-control" type='text' name='article[title]' value="<%=article.title%>">
+    </div>
+    <div class='form-group text-center'>
+      <label for='article[image]'>Image URL</label>
+      <input  class="form-control" type='text' name='article[image]' value="<%=article.image%>">
+    </div>
+    <div class='form-group text-center text-center'>
+      <label for='article[body]'>Text</label>
+      <textarea  class="form-control" name='article[body]'><%=article.body%></textarea>
+    </div>
+    <button class='btn btn-primary'>Submit</button>
+  </form>
+</div>
+<% include ../partials/footer %>

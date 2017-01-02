@@ -1,0 +1,41 @@
+<% include ../partials/header %>
+<div class='glavnina'>
+  <% if(currentUser){ %>
+      <a class='btn btn-primary'href='/articles/new'>Dodaj novi clanak</a>
+    <% } %>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-10'>
+            <div class='row'>
+                <% articles.forEach(function(article){ %>
+            
+                <a href='/articles/<%=article._id%>' class='clickdiv'>
+                <div class='col-md-6'>
+                  <div class='zaokruzi'>
+                    <div>
+                        <image class='img-responsive centriraj'  src='<%= article.image %>'></image>
+                    </div>
+                    <h2 class='text-center'><%= article.title %></h2>
+                    <hr>
+                    <p><%-article.body.substring(0, 20) %>...</p>
+                    <p><em><%= article.created.getDate() %>.<%= article.created.getMonth() %>.<%= article.created.getFullYear()%> god.</em></p>
+                </div>
+              </div>
+              </a>
+              <% }) %>
+            </div>
+      </div>
+      <div class='col-md-2'>
+        <div class='crveno'>
+          <h4>Clanci:</h4>
+          <% articles.forEach(function(article){ %>
+            <ul>
+              <li><a href='/articles/<%=article._id%>'><%=article.title %></a></li>
+            </ul>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% include ../partials/footer %>

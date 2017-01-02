@@ -1,0 +1,60 @@
+@import variables
+// Styling navbara
+@import 'components/nav_normal'
+// Import landing pagea
+@import 'components/landing'
+// Styling za clanke
+@import 'components/articles'
+// Styling galerije slika
+@import 'components/galerija'
+// Styling footera
+@import 'components/footer'
+
+img {
+    max-width: 100%
+}
+ul, a {
+   list-style-type: none;
+}
+hr { 
+  border : 0;
+  height: 1px; 
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); 
+}
+p {
+    text-align: justify;
+}
+em {
+    font-size:12px;
+}
+// Izgled forme za kreiranje articlea(vidljivo adminu)
+#newarticle {
+    width: 35%;
+    margin: 0 auto;
+}
+// Tabela za raspored
+table, th, td {
+	border: 1px solid black;
+	text-align: center;
+	background-color: #FAC408
+}
+
+// Lokacija, styling mape
+#map {
+  width: 100%;
+  height: 475px;
+  background-color: grey;
+}
+// Centriranje kontakt page-a
+.center-vertical {
+  padding-top: 3.5%;
+  padding-bottom: 3.5%;
+}
+// DIV OD BODY-a
+.glavnina {
+  margin-top: 50px;
+  min-height: calc(100vh - 159px);
+}
+
+// Import za navbar collapse
+@import 'components/navbar'

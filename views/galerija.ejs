@@ -1,0 +1,37 @@
+<% include ./partials/header %>
+<div class='glavnina'>
+  <!--Kontrole za galeriju-->
+  <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+  </div>
+  <!--dovde-->
+  <!--body galerije-->
+  <div class="container">
+    <% if (currentUser) { %>
+      <p><a class='btn btn-success'  href='/galerija/new'>Dodaj nove slike</a></p>
+      <p><a class='btn btn-warning'  href='/galerija/delete'>Brisi slike</a></p>
+    <% } %>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2" id="links">
+        <div class='row'>
+        <% links.forEach(function(link){ %>
+          <div class='col-md-3 col-sm-6'>
+            <div class="thumbnail">
+              <a href="<%= link.url %>" title="BTU BJJ">
+              <img class='image-responsive majku' src="<%= link.url %>" alt="BTU BJJ">
+              </a>
+            </div>
+          </div>
+        <% }) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% include ./partials/footer %>

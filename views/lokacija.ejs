@@ -1,0 +1,46 @@
+<% include ./partials/header.ejs %>
+<div class='glavnina'>
+  <div class="container">
+    <div class="row">
+        <div id="map"></div>
+    </div>
+  </div>
+
+  <script>
+        function initMap() {
+
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 8,
+            center: {lat: 44.244175, lng: 18.433893}
+          });
+
+          // Create an array of alphabetical characters used to label the markers.
+          var labels = 'ST';
+
+          // Add some markers to the map.
+          // Note: The code uses the JavaScript Array.prototype.map() method to
+          // create an array of markers based on a given "locations" array.
+          // The map() method here has nothing to do with the Google Maps API.
+          var markers = locations.map(function(location, i) {
+            return new google.maps.Marker({
+              position: location,
+              label: labels[i % labels.length]
+            });
+          });
+
+          // Add a marker clusterer to manage the markers.
+          var markerCluster = new MarkerClusterer(map, markers,
+              {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+        }
+        var locations = [
+          {lat: 43.847327, lng: 18.387857},
+          {lat: 44.538733, lng: 18.676036},
+        ]
+      </script>
+      <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+      </script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaW-DCHey7LrPPzcYuyZz24w5TBPTNeg0&callback=initMap">
+      </script>
+  </div>
+<% include ./partials/footer.ejs %>

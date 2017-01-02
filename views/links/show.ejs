@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+
+<div class='glavnina'>
+	<% links.forEach(function(link){ %>
+	    <div class='col-md-3 col-sm-6'>
+	        <div class="thumbnail">
+	        <img src="<%= link.url %>" alt="BTU BJJ">
+	        </div>
+	        <form action='/galerija/<%=link._id%>?_method=delete' method='POST'>
+	            <button>Delete</button>
+	        </form>
+	    </div>
+	<% }) %>
+</div>
+
+<% include ../partials/footer %>

@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+
+<div class='glavnina'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-8 col-md-offset-2'>
+          <h1 class='text-center'> <%= article.title %></h1>
+          <image class='image-responsive' src='<%= article.image %>'></image>
+          <p><em><%= article.created.getDate() %>.<%= article.created.getMonth() %>.<%= article.created.getFullYear()%> god.</em></p>
+          <p><%- article.body %></p>
+          <% if(currentUser) { %>
+            <a class='btn btn-info' href='/articles/<%=article._id%>/edit'>Edit</a>
+            <form action='/articles/<%=article._id%>?_method=DELETE' method="POST">
+            <button class='btn btn-primary'>Delete</button>
+          <% } %>
+          </form>
+       </div>
+    </div>
+  </div>
+</div>
+
+<% include ../partials/footer %>
