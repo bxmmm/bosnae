@@ -151,16 +151,19 @@ a:hover,
   opacity: 1;
   color: #fff;
 }
-.crveno a,
-.crveno ul,
-.crveno h4 {
+.sidebar a,
+.sidebar ul,
+.sidebar h4 {
   color: #000;
   margin: 5px auto;
   padding: 0;
   text-align: justify;
 }
+.sidebar a:hover {
+  color: #fac408;
+}
 .zaokruzi,
-.crveno {
+.sidebar {
   padding: 5px;
   background-color: #fff;
   border-radius: 0;
@@ -182,7 +185,7 @@ a:hover,
   margin-left: auto;
   margin-bottom: 5px;
 }
-.majku {
+.slicica {
   min-height: 105px;
   max-height: 105px;
   background-size: contain;
@@ -192,7 +195,7 @@ a:hover,
   width: 100%;
   max-width: 100%;
 }
-.footer .sirutka {
+.footer .background {
   background-color: #222;
   width: 100%;
 }
@@ -204,6 +207,9 @@ a:hover,
 }
 .footer ul a {
   color: #fff;
+}
+.footer ul a:hover {
+  color: #fac408;
 }
 .footer #logodno {
   width: 15%;
