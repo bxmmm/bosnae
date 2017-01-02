@@ -190,6 +190,32 @@ a:hover,
   max-height: 105px;
   background-size: contain;
 }
+.ukini {
+  border-bottom: 0;
+  border-top: 0;
+}
+.donja {
+  border-bottom: 0;
+  border-top: 0;
+}
+.gornja {
+  border-top: 0;
+}
+table {
+  margin-top: 20px;
+  border: 1px solid #000;
+  text-align: center;
+  background-color: #fac408;
+}
+.dani {
+  background-color: #222;
+}
+th.dani {
+  color: #fff;
+}
+th {
+  text-align: center;
+}
 .footer {
   height: 109px;
   width: 100%;
@@ -246,13 +272,6 @@ em {
 #newarticle {
   width: 35%;
   margin: 0 auto;
-}
-table,
-th,
-td {
-  border: 1px solid #000;
-  text-align: center;
-  background-color: #fac408;
 }
 #map {
   width: 100%;
