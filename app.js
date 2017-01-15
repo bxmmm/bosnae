@@ -11,9 +11,12 @@ var 					express = require('express'),
 passportLocalMongoose = require('passport-local-mongoose'),
        expressSession = require('express-session');
 
+
 // REQUIRE RUTA
 var articleRoutes = require('./routes/article'),
+        apiRoutes = require('./routes/api'),
       indexRoutes = require('./routes/index');
+
 
 // REQUIRE DB MODELA
 var User = require('./models/user'),
@@ -61,8 +64,10 @@ app.use(function(req, res, next){
 })
 
 // USE ZA ROUTE
-app.use('/articles', articleRoutes)
+app.use('/articles', articleRoutes);
+app.use('/api', apiRoutes);
 app.use(indexRoutes);
+
 
 
 
